@@ -14,3 +14,7 @@ Netlify settings:
 
 - Build command: leave empty
 - Publish directory: `.`
+
+Deployment trigger:
+
+- 2026-06-11 18:37 CST
