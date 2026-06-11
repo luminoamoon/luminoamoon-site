@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LuminoaMoon - Personal Site</title>
+    <meta
+      name="description"
+      content="LuminoaMoon 的个人主页，收集作品、写作、实验和创作计划。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar" data-header>
+      <a class="mark" href="#home" aria-label="LuminoaMoon home">
+        <span>L</span>
+      </a>
+
+      <nav class="nav-pill" aria-label="主导航">
+        <a href="#home">Home</a>
+        <a href="#works">Works</a>
+        <a href="#features">Features</a>
+      </nav>
+
+      <a class="bag-link" href="mailto:luminoamoon@gmail.com" aria-label="联系 LuminoaMoon">
+        <span></span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero-stage" id="home" aria-labelledby="hero-title">
+        <div class="swatch-panel" aria-label="视觉主题">
+          <img src="./assets/orb-mono.svg" alt="" />
+          <span class="swatch soft"></span>
+          <span class="swatch blue"></span>
+          <span class="swatch mint"></span>
+        </div>
+
+        <div class="hero-figure" aria-hidden="true">
+          <img src="./assets/luminoamoon-object.svg" alt="" />
+          <button class="float-play" type="button" aria-label="播放介绍">
+            <span></span>
+          </button>
+        </div>
+
+        <div class="hero-copy">
+          <p class="tiny-label">Personal system · 2026</p>
+          <h1 id="hero-title">LuminoaMoon.</h1>
+          <p>
+            一个轻盈、干净、持续更新的个人空间。用来展示作品、记录想法，也承载正在生长的产品实验。
+          </p>
+        </div>
+
+        <div class="hero-meta">
+          <p>LuminoaMoon Studio</p>
+          <span>Creative portfolio</span>
+          <a class="pill-button" href="#works">View work</a>
+        </div>
+      </section>
+
+      <section class="catalog" id="works" aria-labelledby="works-title">
+        <div class="section-line">
+          <span id="works-title">Products</span>
+          <span class="mini-icon"></span>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-image moon-blue">
+              <img src="./assets/work-capsule.svg" alt="知识库项目视觉" />
+            </div>
+            <div class="product-footer">
+              <div>
+                <h2>Knowledge Capsule</h2>
+                <p>Ideas · Notes</p>
+              </div>
+              <a href="#contact" aria-label="查看 Knowledge Capsule"></a>
+            </div>
+          </article>
+
+          <article class="product-card feature-card reveal">
+            <div class="product-image portrait">
+              <img src="./assets/work-studio.svg" alt="创作系统项目视觉" />
+              <a class="view-disc" href="#features">View ↗</a>
+            </div>
+            <div class="product-footer active">
+              <div>
+                <h2>Moonlit Workflow</h2>
+                <p>AI · Product · Code</p>
+              </div>
+              <a href="#features" aria-label="查看 Moonlit Workflow"></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image moon-green">
+              <img src="./assets/work-signal.svg" alt="写作和实验项目视觉" />
+            </div>
+            <div class="product-footer">
+              <div>
+                <h2>Signal Journal</h2>
+                <p>Writing · Research</p>
+              </div>
+              <a href="#contact" aria-label="查看 Signal Journal"></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-section" id="features" aria-labelledby="features-title">
+        <div class="section-line">
+          <span id="features-title">Features</span>
+          <span class="mini-icon"></span>
+        </div>
+
+        <div class="feature-board">
+          <div class="feature-left reveal">
+            <h2>Feel the<br /><span>LuminoaMoon</span></h2>
+            <div class="line-symbol" aria-hidden="true"></div>
+            <img src="./assets/feature-scene.svg" alt="LuminoaMoon 的创作工作流视觉" />
+          </div>
+
+          <div class="feature-right">
+            <dl class="spec-grid reveal">
+              <div>
+                <dt>Direction</dt>
+                <dd>Portfolio</dd>
+              </div>
+              <div>
+                <dt>System</dt>
+                <dd>Personal OS</dd>
+              </div>
+              <div>
+                <dt>Mode</dt>
+                <dd>Minimal</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Creative work</dd>
+              </div>
+              <div>
+                <dt>Update</dt>
+                <dd>Ongoing</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>Quiet clarity</dd>
+              </div>
+            </dl>
+
+            <div class="action-row reveal">
+              <a class="black-button" href="mailto:luminoamoon@gmail.com">Contact</a>
+              <a class="outline-button" href="#works">View more ↗</a>
+            </div>
+
+            <div class="statement reveal">
+              <img src="./assets/detail-panel.svg" alt="界面细节视觉" />
+              <p>
+                THE MOST QUIET AND
+                <span>THOUGHTFUL</span>
+                DIGITAL HOME THAT
+                <span>INSPIRES</span>
+                WORK, NOTES AND RELIABILITY IN ANY SITUATION.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-strip" id="contact" aria-label="联系">
+        <p>Build the next version together.</p>
+        <a href="mailto:luminoamoon@gmail.com">luminoamoon@gmail.com</a>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
