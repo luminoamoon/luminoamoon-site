@@ -4,6 +4,7 @@
   --panel: #ffffff;
   --ink: #202124;
   --muted: #777b7d;
+  --soft-ink: #3b3e40;
   --line: #d7d8d5;
   --blue: #8fa8ba;
   --mint: #9ac6bd;
@@ -28,7 +29,7 @@ body {
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 a {
@@ -157,9 +158,21 @@ main {
   box-shadow: var(--shadow);
 }
 
+.hero-stage::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 45%;
+  background: linear-gradient(0deg, rgba(248, 248, 245, 0.88), rgba(248, 248, 245, 0));
+  content: "";
+  pointer-events: none;
+}
+
 .swatch-panel {
   position: absolute;
-  top: 154px;
+  top: 112px;
   left: clamp(26px, 8vw, 112px);
   z-index: 4;
   display: flex;
@@ -244,15 +257,20 @@ main {
 
 .hero-copy {
   position: absolute;
-  right: clamp(18px, 5vw, 78px);
-  bottom: clamp(132px, 23vh, 250px);
-  left: clamp(18px, 5vw, 78px);
+  right: clamp(24px, 6vw, 96px);
+  bottom: clamp(170px, 22vh, 235px);
+  left: clamp(24px, 6vw, 96px);
   z-index: 3;
   pointer-events: none;
 }
 
 .tiny-label {
-  margin: 0 0 10px;
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 12px;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: rgba(248, 248, 245, 0.72);
   color: var(--muted);
   font-size: 11px;
   font-weight: 800;
@@ -261,29 +279,41 @@ main {
 }
 
 .hero-copy h1 {
+  max-width: 11ch;
   margin: 0;
   color: var(--ink);
-  font-size: clamp(70px, 15vw, 224px);
-  font-weight: 520;
+  font-size: clamp(62px, 10.8vw, 148px);
+  font-weight: 560;
   letter-spacing: 0;
-  line-height: 0.86;
+  line-height: 0.9;
 }
 
 .hero-copy p:last-child {
-  max-width: 430px;
-  margin: 18px 0 0 auto;
-  color: #3f4244;
-  font-size: clamp(15px, 1.5vw, 18px);
+  max-width: 500px;
+  margin: 22px 0 0 auto;
+  border-radius: 18px;
+  padding: 14px 18px;
+  background: rgba(248, 248, 245, 0.72);
+  color: var(--soft-ink);
+  font-size: clamp(16px, 1.25vw, 19px);
+  font-weight: 560;
+  line-height: 1.72;
+  text-wrap: pretty;
+  backdrop-filter: blur(16px);
 }
 
 .hero-meta {
   position: absolute;
-  right: clamp(34px, 12vw, 260px);
-  bottom: clamp(84px, 15vh, 150px);
+  right: clamp(24px, 10vw, 220px);
+  bottom: clamp(58px, 11vh, 118px);
   z-index: 6;
   display: grid;
-  gap: 2px;
+  gap: 4px;
   min-width: 220px;
+  border-radius: 20px;
+  padding: 14px 16px;
+  background: rgba(248, 248, 245, 0.68);
+  backdrop-filter: blur(16px);
 }
 
 .hero-meta p {
@@ -294,7 +324,8 @@ main {
 
 .hero-meta span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .pill-button,
@@ -431,14 +462,16 @@ main {
 
 .product-footer h2 {
   margin: 0 0 2px;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
+  line-height: 1.22;
 }
 
 .product-footer p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .product-footer a {
@@ -491,7 +524,7 @@ main {
   margin: 0;
   font-size: clamp(42px, 6vw, 84px);
   font-weight: 520;
-  line-height: 0.98;
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -552,13 +585,15 @@ main {
 
 .spec-grid dt {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
+  line-height: 1.35;
 }
 
 .spec-grid dd {
   margin: 7px 0 0;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 740;
+  line-height: 1.32;
 }
 
 .action-row {
@@ -591,16 +626,21 @@ main {
 
 .statement p {
   margin: 0;
-  font-size: clamp(22px, 3.4vw, 38px);
-  line-height: 1.32;
+  color: var(--soft-ink);
+  font-size: clamp(21px, 2.7vw, 32px);
+  font-weight: 620;
+  line-height: 1.5;
   letter-spacing: 0;
+  text-wrap: pretty;
 }
 
 .statement span {
   display: inline-block;
   border: 1px solid rgba(32, 33, 36, 0.5);
   border-radius: 999px;
-  padding: 0 10px 2px;
+  margin: 0 2px;
+  padding: 1px 10px 3px;
+  color: var(--ink);
   font-size: 0.78em;
 }
 
@@ -648,7 +688,11 @@ main {
   }
 
   .hero-copy h1 {
-    font-size: clamp(74px, 17vw, 150px);
+    font-size: clamp(62px, 13vw, 116px);
+  }
+
+  .hero-copy p:last-child {
+    margin-left: 0;
   }
 
   .product-grid,
@@ -685,7 +729,7 @@ main {
   }
 
   .hero-stage {
-    min-height: 760px;
+    min-height: 780px;
   }
 
   .swatch-panel {
@@ -721,17 +765,30 @@ main {
   }
 
   .hero-copy {
-    bottom: 148px;
+    right: 16px;
+    bottom: 174px;
+    left: 16px;
+  }
+
+  .hero-copy h1 {
+    max-width: 9ch;
+    font-size: clamp(56px, 18vw, 86px);
+    line-height: 0.94;
   }
 
   .hero-copy p:last-child {
-    margin-left: 0;
+    max-width: none;
+    margin-top: 18px;
+    padding: 13px 14px;
+    font-size: 15px;
+    line-height: 1.68;
   }
 
   .hero-meta {
-    right: 18px;
-    bottom: 50px;
-    left: 18px;
+    right: 16px;
+    bottom: 44px;
+    left: 16px;
+    min-width: 0;
   }
 
   .catalog,
@@ -768,6 +825,15 @@ main {
 
   .spec-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .statement {
+    gap: 22px;
+  }
+
+  .statement p {
+    font-size: 22px;
+    line-height: 1.55;
   }
 
   .contact-strip {
